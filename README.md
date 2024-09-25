@@ -47,7 +47,7 @@ The goal now is to create a scheduled query that will filter only the recommenda
   - Configure the schedule to run at intervals that fit your needs (e.g., daily, weekly).
   - Select the destination table where the cleaned recommendations will be stored.
 
-<img src="https://github.com/user-attachments/assets/6faa5f40-4c67-4ed4-9eaf-56e19e3724b2" alt="big3" width="600"/>
+<img src="https://github.com/user-attachments/assets/6faa5f40-4c67-4ed4-9eaf-56e19e3724b2" alt="big3" width="1200"/>
 
 Below is an example of a query that you can use to create a clean table with cost recommendations.
 
