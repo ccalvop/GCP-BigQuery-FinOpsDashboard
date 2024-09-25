@@ -10,6 +10,7 @@
   --Destination settings (Dataset)
 
 - BigQuery > Create Transfer with Data Transfers
+![big2](https://github.com/user-attachments/assets/d0174734-642b-463c-8f6d-6fdc13c4fac5)
   -- Source type: Recommender V1
     - Configure Transfer
       --Transfer config name
