@@ -8,6 +8,10 @@
 
 This project aims to create a FinOps dashboard using GCP's Recommender data to optimize costs. The recommender data will first be exported to BigQuery and automatically updated at intervals set by the user. After the export, we will create a filtered table containing only **"cost"** type recommendations by scheduling a query in BigQuery. This filtered table will be connected to a **Looker Studio** dashboard to visualize the data. Although it's possible to directly connect the Recommender table to Looker, a scheduled query is used to clean the data and focus solely on cost-related recommendations.
 
+### 0. Create the dataset in Bigquery
+
+<img src="https://github.com/user-attachments/assets/da899395-5060-4a75-9705-a72a21d68176" alt="big0-1" width="400"/>
+
 ### 1. Recommendations export
 
 - **Recommendations Hub > Data Transfer to BigQuery from Recommendations Hub**  
@@ -30,7 +34,11 @@ This project aims to create a FinOps dashboard using GCP's Recommender data to o
   
 ### 2. BigQuery Environment: Scheduled Query to Filter Recommendations
 
-Once the recommendations data is exported to BigQuery, you can access the resulting tables. The goal now is to create a scheduled query that will filter only the recommendations related to cost optimization. 
+Once the recommendations data is exported to BigQuery, you can access the resulting tables. 
+
+<img src="https://github.com/user-attachments/assets/2b388512-ad10-4fe6-a57c-52911aa8a956" alt="big0-2" width="600"/>
+
+The goal now is to create a scheduled query that will filter only the recommendations related to cost optimization. 
 
 - **Steps to configure the scheduled query:**
   - Go to BigQuery and navigate to your dataset.
@@ -38,6 +46,8 @@ Once the recommendations data is exported to BigQuery, you can access the result
   - Create a new scheduled query and paste the provided SQL.
   - Configure the schedule to run at intervals that fit your needs (e.g., daily, weekly).
   - Select the destination table where the cleaned recommendations will be stored.
+
+<img src="https://github.com/user-attachments/assets/6faa5f40-4c67-4ed4-9eaf-56e19e3724b2" alt="big3" width="600"/>
 
 Below is an example of a query that you can use to create a clean table with cost recommendations.
 
