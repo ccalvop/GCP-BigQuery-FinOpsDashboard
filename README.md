@@ -1,6 +1,8 @@
 ### GCP-BigQueryFinOpsDashboard
 
-![big0](https://github.com/user-attachments/assets/ec951201-061a-428f-b546-c67b111a8f7e)
+<p align="center">
+<img src="https://github.com/user-attachments/assets/ec951201-061a-428f-b546-c67b111a8f7e" />
+</p>
 
 ## Introduction
 
