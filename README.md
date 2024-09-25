@@ -1,4 +1,4 @@
-# GCP-BigQueryFinOpsDashboard
+# GCP-BigQuery-FinOpsDashboard
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/ec951201-061a-428f-b546-c67b111a8f7e" />
