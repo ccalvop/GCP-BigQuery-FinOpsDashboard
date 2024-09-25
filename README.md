@@ -36,7 +36,7 @@ This project aims to create a FinOps dashboard using GCP's Recommender data to o
 
 Once the recommendations data is exported to BigQuery, you can access the resulting tables. 
 
-<img src="https://github.com/user-attachments/assets/2b388512-ad10-4fe6-a57c-52911aa8a956" alt="big0-2" width="600"/>
+<img src="https://github.com/user-attachments/assets/2b388512-ad10-4fe6-a57c-52911aa8a956" alt="big0-2" width="400"/>
 
 The goal now is to create a scheduled query that will filter only the recommendations related to cost optimization. 
 
@@ -86,6 +86,9 @@ LEFT JOIN
 ON
    p.project_number = CAST(REGEXP_EXTRACT(t.name, r'projects/([^/]+)') AS INT64);
 ```
+
+<img src="https://github.com/user-attachments/assets/cb56b2c2-50a3-4f89-a8de-6d577647cda5" alt="big0-3" width="400"/>
+
 
 ### 3. Looker Studio Dashboard
 
