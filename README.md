@@ -1,5 +1,7 @@
 ### GCP-BigQueryFinOpsDashboard
 
+![big0](https://github.com/user-attachments/assets/ec951201-061a-428f-b546-c67b111a8f7e)
+
 ## Introduction
 
 This project aims to create a FinOps dashboard using GCP's Recommender data to optimize costs. The recommender data will first be exported to BigQuery and automatically updated at intervals set by the user. After the export, we will create a filtered table containing only **"cost"** type recommendations by scheduling a query in BigQuery. This filtered table will be connected to a **Looker Studio** dashboard to visualize the data. Although it's possible to directly connect the Recommender table to Looker, a scheduled query is used to clean the data and focus solely on cost-related recommendations.
@@ -11,6 +13,7 @@ This project aims to create a FinOps dashboard using GCP's Recommender data to o
     -- Transfer config name  
     -- Schedule options (Repeat frequency)  
     -- Destination settings (Dataset)
+    
 <img src="https://github.com/user-attachments/assets/50bf9539-9e19-4c17-a488-8743c0687bdf" alt="big1" width="600"/>
 
 - **BigQuery > Create Transfer with Data Transfers**  
@@ -20,6 +23,7 @@ This project aims to create a FinOps dashboard using GCP's Recommender data to o
       -- Schedule options (Repeat frequency)  
       -- Destination settings (Dataset)  
       -- Data Source (Organization's recommendations)
+      
   <img src="https://github.com/user-attachments/assets/d0174734-642b-463c-8f6d-6fdc13c4fac5" alt="big2" width="600"/>
   
 ### 2. BigQuery Environment: Scheduled Query to Filter Recommendations
