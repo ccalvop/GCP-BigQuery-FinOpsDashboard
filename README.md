@@ -7,24 +7,24 @@ This project aims to create a FinOps dashboard using GCP's Recommender data to o
 ### 1. Recommendations export
 
 - **Recommendations Hub > Data Transfer to BigQuery from Recommendations Hub**  
-  <img src="https://github.com/user-attachments/assets/50bf9539-9e19-4c17-a488-8743c0687bdf" alt="big1" width="600"/>
   - Configure Transfer  
     -- Transfer config name  
     -- Schedule options (Repeat frequency)  
     -- Destination settings (Dataset)
+<img src="https://github.com/user-attachments/assets/50bf9539-9e19-4c17-a488-8743c0687bdf" alt="big1" width="600"/>
 
 - **BigQuery > Create Transfer with Data Transfers**  
-  <img src="https://github.com/user-attachments/assets/d0174734-642b-463c-8f6d-6fdc13c4fac5" alt="big2" width="600"/>
   - Source type: Recommender V1  
     - Configure Transfer  
       -- Transfer config name  
       -- Schedule options (Repeat frequency)  
       -- Destination settings (Dataset)  
       -- Data Source (Organization's recommendations)
-
+  <img src="https://github.com/user-attachments/assets/d0174734-642b-463c-8f6d-6fdc13c4fac5" alt="big2" width="600"/>
+  
 ### 2. BigQuery Environment: Scheduled Query to Filter Recommendations
 
-Once the recommendations data is exported to BigQuery, you can access the resulting tables. The goal is to create a scheduled query that will filter only the recommendations related to cost optimization. Below is an example of a query that you can use to create a clean table with cost recommendations.
+Once the recommendations data is exported to BigQuery, you can access the resulting tables. The goal now is to create a scheduled query that will filter only the recommendations related to cost optimization. 
 
 - **Steps to configure the scheduled query:**
   - Go to BigQuery and navigate to your dataset.
@@ -33,6 +33,7 @@ Once the recommendations data is exported to BigQuery, you can access the result
   - Configure the schedule to run at intervals that fit your needs (e.g., daily, weekly).
   - Select the destination table where the cleaned recommendations will be stored.
 
+Below is an example of a query that you can use to create a clean table with cost recommendations.
 
 ```sql
 WITH filtered_recommendations AS (
