@@ -93,5 +93,3 @@ ON
 ### 3. Looker Studio Dashboard
 
 In this final step, we will connect the cleaned recommendations table from BigQuery to a Looker Studio dashboard. Although the raw recommendations could be connected directly, we use a filtered table to focus specifically on cost-related optimizations. 
-
-TIME - 2025-10-20 23:51:59
